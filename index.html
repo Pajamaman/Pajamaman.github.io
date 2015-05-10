@@ -9,6 +9,7 @@
                 color: white;
                 font-family: 'Ubuntu', sans-serif;
                 margin: 0;
+                overflow: hidden;
             }
             a {
                 color: black;
@@ -31,7 +32,7 @@
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
                 box-sizing: border-box;
-                padding: 1em;
+                padding: 16px;
 
                 opacity: 0;
                 -webkit-transition: opacity 0.3s;
@@ -70,50 +71,101 @@
             div.outer:last-child div.inner {
                 background: rgba(230, 180, 50, 0.8);
             }
+            #more {
+                margin: auto;
+
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -100px;
+                -webkit-transition: bottom 0.3s;
+                transition: bottom 0.3s;
+            }
+            #more:hover {
+                bottom: -10px;
+                -webkit-transition: bottom 0.3s;
+                transition: bottom 0.3s;
+
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
-        <div class="outer">
-            <div class="inner">
-                <h1>banking</h1>
-                <p>A Node.js console application that I use to figure out where my money goes.</p>
-                <p>
-                    <a href="https://github.com/Pajamaman/banking">Source</a>
-                </p>
+        <div>
+            <div class="outer">
+                <div class="inner">
+                    <h1>banking</h1>
+                    <p>A Node.js console application that I use to figure out where my money goes.</p>
+                    <p>
+                        <a href="https://github.com/Pajamaman/banking">Source</a>
+                    </p>
+                </div>
+            </div>
+            <div class="outer">
+                <div class="inner">
+                    <h1>clean-html</h1>
+                    <p>An npm package for cleaning and beautifying HTML.</p>
+                    <p>
+                        <a href="https://www.npmjs.org/packages/clean-html">Package</a> |
+                        <a href="https://github.com/Pajamaman/clean-html">Source</a>
+                    </p>
+                </div>
+            </div>
+            <div class="outer">
+                <div class="inner">
+                    <h1>CharacterSheet</h1>
+                    <p>
+                        An interactive D&amp;D v3.5 character sheet that uses
+                        <a href="https://github.com/Pajamaman/Knockoff">Knockoff</a> for model binding.
+                    </p>
+                    <p>
+                        <a href="https://Pajamaman.github.io/CharacterSheet">Demo</a> |
+                        <a href="https://github.com/Pajamaman/CharacterSheet">Source</a>
+                    </p>
+                </div>
+            </div>
+            <div class="outer">
+                <div class="inner">
+                    <h1>poolwheel</h1>
+                    <p>Code wheel for the classic RPG “Pool of Radiance” by SSI.</p>
+                    <p>
+                        <a href="https://Pajamaman.github.io/poolwheel">Demo</a> |
+                        <a href="https://github.com/Pajamaman/poolwheel">Source</a>
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="outer">
-            <div class="inner">
-                <h1>clean-html</h1>
-                <p>An npm package for cleaning and beautifying HTML.</p>
-                <p>
-                    <a href="https://www.npmjs.org/packages/clean-html">Package</a> |
-                    <a href="https://github.com/Pajamaman/clean-html">Source</a>
-                </p>
-            </div>
-        </div>
-        <div class="outer">
-            <div class="inner">
-                <h1>CharacterSheet</h1>
-                <p>
-                    An interactive D&amp;D v3.5 character sheet that uses
-                    <a href="https://github.com/Pajamaman/Knockoff">Knockoff</a> for model binding.
-                </p>
-                <p>
-                    <a href="https://Pajamaman.github.io/CharacterSheet">Demo</a> |
-                    <a href="https://github.com/Pajamaman/CharacterSheet">Source</a>
-                </p>
-            </div>
-        </div>
-        <div class="outer">
-            <div class="inner">
-                <h1>poolwheel</h1>
-                <p>Code wheel for the classic RPG “Pool of Radiance” by SSI.</p>
-                <p>
-                    <a href="https://Pajamaman.github.io/poolwheel">Demo</a> |
-                    <a href="https://github.com/Pajamaman/poolwheel">Source</a>
-                </p>
-            </div>
-        </div>
+        <canvas id="more" width="300" height="150"></canvas>
+        <script>
+            (function () {
+                var canvas = document.getElementById('more'),
+                    context = canvas.getContext('2d');
+
+                context.beginPath();
+                context.arc(150, 150, 150, Math.PI, 0);
+                context.fillStyle = 'black';
+                context.fill();
+
+                context.beginPath();
+                context.moveTo(130, 40);
+                context.lineWidth = 2;
+                context.lineTo(150, 20);
+                context.lineTo(170, 40);
+                context.strokeStyle = 'white';
+                context.stroke();
+
+                context.font = '20px Ubuntu';
+                context.textAlign = 'center';
+                context.fillStyle = 'white';
+                context.fillText('These are just', 150, 70);
+                context.fillText('a few of my faves...', 150, 95);
+                context.font = '16px Ubuntu';
+                context.fillText('Click for more', 150, 125);
+
+                canvas.onclick = function () {
+                    document.location = 'https://github.com/Pajamaman?tab=repositories';
+                };
+            }());
+        </script>
     </body>
 </html>
