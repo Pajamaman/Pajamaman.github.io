@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Howdy</title>
+        <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <style>
+            body {
+                color: white;
+                font-family: 'Ubuntu', sans-serif;
+                margin: 0;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            div.outer {
+                width: 25%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+
+                -webkit-background-size: cover;
+                background-size: cover;
+            }
+            div.inner {
+                width: 100%;
+                height: 100%;
+
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 1em;
+
+                opacity: 0;
+                -webkit-transition: opacity 0.3s;
+                transition: opacity 0.3s;
+            }
+            div.outer:hover div.inner {
+                opacity: 1;
+                -webkit-transition: opacity 0.3s;
+                transition: opacity 0.3s;
+            }
+            div.outer:first-child {
+                background-image: url('img/PlasterColoured0175_2_S.jpg');
+                left: 0;
+            }
+            div.outer:first-child div.inner {
+                background: rgba(200, 50, 20, 0.8);
+            }
+            div.outer:nth-child(2) {
+                background-image: url('img/GrungePaint0014_S.jpg');
+                left: 25%;
+            }
+            div.outer:nth-child(2) div.inner {
+                background: rgba(30, 114, 194, 0.8);
+            }
+            div.outer:nth-child(3) {
+                background-image: url('img/PlasterColoured0229_3_S.jpg');
+                left: 50%;
+            }
+            div.outer:nth-child(3) div.inner {
+                background: rgba(150, 184, 54, 0.8);
+            }
+            div.outer:last-child {
+                background-image: url('img/GrungePaint0008_1_S.jpg');
+                left: 75%;
+            }
+            div.outer:last-child div.inner {
+                background: rgba(230, 180, 50, 0.8);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <div class="inner">
+                <h1>banking</h1>
+                <p>A Node.js console application that I use to figure out where my money goes.</p>
+                <p>
+                    <a href="https://github.com/Pajamaman/banking">Source</a>
+                </p>
+            </div>
+        </div>
+        <div class="outer">
+            <div class="inner">
+                <h1>clean-html</h1>
+                <p>An npm package for cleaning and beautifying HTML.</p>
+                <p>
+                    <a href="https://www.npmjs.org/packages/clean-html">Package</a> |
+                    <a href="https://github.com/Pajamaman/clean-html">Source</a>
+                </p>
+            </div>
+        </div>
+        <div class="outer">
+            <div class="inner">
+                <h1>D&D v3.5 Character Sheet</h1>
+                <p>
+                    An interactive character sheet that uses
+                    <a href="https://github.com/Pajamaman/Knockoff">Knockoff</a> for model binding.
+                </p>
+                <p>
+                    <a href="https://Pajamaman.github.io/CharacterSheet">Demo</a> |
+                    <a href="https://github.com/Pajamaman/banking">Source</a>
+                </p>
+            </div>
+        </div>
+        <div class="outer">
+            <div class="inner">
+                <h1>Pool of Radiance Code Wheel</h1>
+                <p>Code wheel for the classic RPG “Pool of Radiance” by SSI.</p>
+                <p>
+                    <a href="https://Pajamaman.github.io/poolwheel">Demo</a> |
+                    <a href="https://github.com/Pajamaman/poolwheel">Source</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
