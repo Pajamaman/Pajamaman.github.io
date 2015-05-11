@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>Howdy</title>
-        <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
         <style>
             body {
                 color: white;
@@ -136,35 +135,45 @@
             </div>
         </div>
         <canvas id="more" width="300" height="150"></canvas>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
         <script>
             (function () {
-                var canvas = document.getElementById('more'),
-                    context = canvas.getContext('2d');
+                function drawMoreLink() {
+                    var canvas = document.getElementById('more'),
+                        context = canvas.getContext('2d');
 
-                context.beginPath();
-                context.arc(150, 150, 150, Math.PI, 0);
-                context.fillStyle = 'black';
-                context.fill();
+                    context.beginPath();
+                    context.arc(150, 150, 150, Math.PI, 0);
+                    context.fillStyle = 'black';
+                    context.fill();
 
-                context.beginPath();
-                context.moveTo(130, 40);
-                context.lineWidth = 2;
-                context.lineTo(150, 20);
-                context.lineTo(170, 40);
-                context.strokeStyle = 'white';
-                context.stroke();
+                    context.beginPath();
+                    context.moveTo(130, 40);
+                    context.lineWidth = 2;
+                    context.lineTo(150, 20);
+                    context.lineTo(170, 40);
+                    context.strokeStyle = 'white';
+                    context.stroke();
 
-                context.font = '20px Ubuntu';
-                context.textAlign = 'center';
-                context.fillStyle = 'white';
-                context.fillText('These are just', 150, 70);
-                context.fillText('a few of my faves...', 150, 95);
-                context.font = '16px Ubuntu';
-                context.fillText('Click for more', 150, 125);
+                    context.font = '20px Ubuntu';
+                    context.textAlign = 'center';
+                    context.fillStyle = 'white';
+                    context.fillText('These are just', 150, 70);
+                    context.fillText('a few of my faves...', 150, 95);
+                    context.font = '16px Ubuntu';
+                    context.fillText('Click for more', 150, 125);
 
-                canvas.onclick = function () {
-                    document.location = 'https://github.com/Pajamaman?tab=repositories';
-                };
+                    canvas.onclick = function () {
+                        document.location = 'https://github.com/Pajamaman?tab=repositories';
+                    };
+                }
+
+                WebFont.load({
+                    google: {
+                        families: ['Ubuntu::latin']
+                    },
+                    active: drawMoreLink
+                });
             }());
         </script>
     </body>
