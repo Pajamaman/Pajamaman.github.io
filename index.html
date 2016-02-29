@@ -3,178 +3,24 @@
     <head>
         <meta charset="utf-8">
         <title>Howdy</title>
-        <style>
-            body {
-                color: white;
-                font-family: 'Ubuntu', sans-serif;
-                margin: 0;
-                overflow: hidden;
-            }
-            a {
-                color: black;
-                text-decoration: none;
-            }
-            div.outer {
-                width: 25%;
-                height: 100%;
-
-                position: absolute;
-                top: 0;
-
-                -webkit-background-size: cover;
-                background-size: cover;
-            }
-            div.inner {
-                width: 100%;
-                height: 100%;
-
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                box-sizing: border-box;
-                padding: 16px;
-
-                opacity: 0;
-                -webkit-transition: opacity 0.3s;
-                transition: opacity 0.3s;
-            }
-            div.outer:hover div.inner {
-                opacity: 1;
-                -webkit-transition: opacity 0.3s;
-                transition: opacity 0.3s;
-            }
-            div.outer:first-child {
-                background-image: url('img/PlasterColoured0175_2_S.jpg');
-                left: 0;
-            }
-            div.outer:first-child div.inner {
-                background: rgba(200, 50, 20, 0.8);
-            }
-            div.outer:nth-child(2) {
-                background-image: url('img/GrungePaint0014_S.jpg');
-                left: 25%;
-            }
-            div.outer:nth-child(2) div.inner {
-                background: rgba(30, 114, 194, 0.8);
-            }
-            div.outer:nth-child(3) {
-                background-image: url('img/PlasterColoured0229_3_S.jpg');
-                left: 50%;
-            }
-            div.outer:nth-child(3) div.inner {
-                background: rgba(150, 184, 54, 0.8);
-            }
-            div.outer:last-child {
-                background-image: url('img/GrungePaint0008_1_S.jpg');
-                left: 75%;
-            }
-            div.outer:last-child div.inner {
-                background: rgba(230, 180, 50, 0.8);
-            }
-            #more {
-                margin: auto;
-
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: -100px;
-                -webkit-transition: bottom 0.3s;
-                transition: bottom 0.3s;
-            }
-            #more:hover {
-                bottom: -10px;
-                -webkit-transition: bottom 0.3s;
-                transition: bottom 0.3s;
-
-                cursor: pointer;
-            }
-        </style>
     </head>
     <body>
-        <div>
-            <div class="outer">
-                <div class="inner">
-                    <h1>banking</h1>
-                    <p>A Node.js console application that I use to figure out where my money goes.</p>
-                    <p>
-                        <a href="https://github.com/Pajamaman/banking">Source</a>
-                    </p>
-                </div>
-            </div>
-            <div class="outer">
-                <div class="inner">
-                    <h1>clean-html</h1>
-                    <p>An npm package for cleaning and beautifying HTML.</p>
-                    <p>
-                        <a href="https://www.npmjs.org/packages/clean-html">Package</a> |
-                        <a href="https://github.com/Pajamaman/clean-html">Source</a>
-                    </p>
-                </div>
-            </div>
-            <div class="outer">
-                <div class="inner">
-                    <h1>CharacterSheet</h1>
-                    <p>
-                        An interactive D&amp;D v3.5 character sheet that uses
-                        <a href="https://github.com/Pajamaman/Knockoff">Knockoff</a> for model binding.
-                    </p>
-                    <p>
-                        <a href="https://Pajamaman.github.io/CharacterSheet">Demo</a> |
-                        <a href="https://github.com/Pajamaman/CharacterSheet">Source</a>
-                    </p>
-                </div>
-            </div>
-            <div class="outer">
-                <div class="inner">
-                    <h1>poolwheel</h1>
-                    <p>Code wheel for the classic RPG “Pool of Radiance” by SSI.</p>
-                    <p>
-                        <a href="https://Pajamaman.github.io/poolwheel">Demo</a> |
-                        <a href="https://github.com/Pajamaman/poolwheel">Source</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <canvas id="more" width="300" height="150"></canvas>
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
-        <script>
-            (function () {
-                function drawMoreLink() {
-                    var canvas = document.getElementById('more'),
-                        context = canvas.getContext('2d');
-
-                    context.beginPath();
-                    context.arc(150, 150, 150, Math.PI, 0);
-                    context.fillStyle = 'black';
-                    context.fill();
-
-                    context.beginPath();
-                    context.moveTo(130, 40);
-                    context.lineWidth = 2;
-                    context.lineTo(150, 20);
-                    context.lineTo(170, 40);
-                    context.strokeStyle = 'white';
-                    context.stroke();
-
-                    context.font = '20px Ubuntu';
-                    context.textAlign = 'center';
-                    context.fillStyle = 'white';
-                    context.fillText('These are just', 150, 70);
-                    context.fillText('a few of my faves...', 150, 95);
-                    context.font = '16px Ubuntu';
-                    context.fillText('Click for more', 150, 125);
-
-                    canvas.onclick = function () {
-                        document.location = 'https://github.com/Pajamaman?tab=repositories';
-                    };
-                }
-
-                WebFont.load({
-                    google: {
-                        families: ['Ubuntu::latin']
-                    },
-                    active: drawMoreLink
-                });
-            }());
-        </script>
+        <h1>Stuff is Moved</h1>
+        <p>I've accumulated many projects here over the years. Those that I'm still able and willing
+            to maintain have been moved <a href="https://github.com/dave-kennedy">here</a>. The rest
+            will remain for posterity.</p>
+        <ul>
+            <li>Fluent NHiberante and Castle Windsor demos (outdated):
+                <a href="https://github.com/Pajamaman/Fluent-NHibernate-Console">part 1</a>,
+                <a href="https://github.com/Pajamaman/Fluent-NHibernate-MVC-3">part 2</a>,
+                <a href="https://github.com/Pajamaman/Castle-Fluent-NHibernate-MVC-3">part
+                    3</a></li>
+            <li>jQuery and jQuery UI plugins (probably outdated):
+                <a href="https://github.com/Pajamaman/jquery.squeezebox">squeezebox</a>,
+                <a href="https://github.com/Pajamaman/jquery.tabbler">tabbler</a>,
+                <a href="https://github.com/Pajamaman/jquery.toggleme">toggleme</a>,
+                <a href="https://github.com/Pajamaman/jquery.ui.selectbox">selectbox</a>,
+                <a href="https://github.com/Pajamaman/jquery.ui.vertabs">vertabs</a></li>
+        </ul>
     </body>
 </html>
